@@ -1,0 +1,41 @@
+
+# gazebo 실행
+terminal1 
+- cd ~/ros2_ws
+- ros2 launch rover_gazebo mars.launch.py
+
+# rover teleop
+terminal2
+- cd ~/ros2_ws/src/ros2_rover/rover_teleop/rover_teleop
+- python3 teleop_keyboard_node.py
+
+# drone control
+terminal3
+- python3 drone_cmd.py
+
+# user order
+terminal4
+- python3 pub.py
+
+
+
+!!!!!!!!!!!!명령 입력!!!!!!!!!!!!!!!!!!!
+
+user order명령을 내릴 땐 문자 입력 후 enter
+t <- takeoff
+h <- back home
+1.0 2.0 3.0 <- 이런식으로 /x좌표 y좌표 z좌표/ 형태로 원하는 위치 입력
+
+
+!!!!!!!!!!!!수정 및 제작한 파일!!!!!!!!!!!!!!!!!!!
+
+drone_cmd.py
+pub.py
+
+ros2_rover/rover_description/meshes/bases/roof.stl
+ros2_rover/rover_description/robots/rover.urdf.xacro
+ros2_rover/rover_gazebo/launch/gazebo.launch.py
+ros2_rover/rover_gazebo/launch/mars.launch.py
+
+sjtu_drone/launch/sjtu_drone_gazebo.launch.py
+sjtu_drone/bringup/spawn_drone.py
